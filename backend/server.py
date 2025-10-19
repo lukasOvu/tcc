@@ -339,6 +339,7 @@ def get_documents():
 # ==================== SIMULAÇÃO DE IR ====================
 
 
+@app.route('/simulation/calculate', methods=['POST'])
 @app.route('/api/simulation/calculate', methods=['POST'])
 def calculate_ir():
     try:
