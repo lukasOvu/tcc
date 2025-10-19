@@ -173,6 +173,7 @@ def get_current_user():
 # ==================== CHATBOT ====================
 
 
+@app.route('/chatbot/message', methods=['POST'])
 @app.route('/api/chatbot/message', methods=['POST'])
 def chatbot_message():
     try:
