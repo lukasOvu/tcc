@@ -313,6 +313,10 @@ def upload_document():
         return jsonify({"error": "Erro ao fazer upload do documento"}), 500
 
 
+@app.route('/documents', methods=['GET'])
+@app.route('/documents/', methods=['GET'])
+@app.route('/document', methods=['GET'])
+@app.route('/document/', methods=['GET'])
 @app.route('/api/documents', methods=['GET'])
 @app.route('/api/documents/', methods=['GET'])
 def get_documents():
