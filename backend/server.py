@@ -148,6 +148,7 @@ def login():
         return jsonify({"error": "Erro ao realizar login"}), 500
 
 
+@app.route('/auth/logout', methods=['POST'])
 @app.route('/api/auth/logout', methods=['POST'])
 def logout():
     session.clear()
