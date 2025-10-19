@@ -226,6 +226,7 @@ def chatbot_message():
         }), 500
 
 
+@app.route('/chatbot/history', methods=['GET'])
 @app.route('/api/chatbot/history', methods=['GET'])
 def get_chat_history():
     try:
