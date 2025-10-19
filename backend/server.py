@@ -406,6 +406,7 @@ def calculate_ir():
         return jsonify({"error": "Erro ao calcular imposto"}), 500
 
 
+@app.route('/simulation/history', methods=['GET'])
 @app.route('/api/simulation/history', methods=['GET'])
 def get_simulation_history():
     try:
