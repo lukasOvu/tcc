@@ -247,6 +247,7 @@ def get_chat_history():
 # ==================== DOCUMENTOS ====================
 
 
+@app.route('/documents/upload', methods=['POST'])
 @app.route('/api/documents/upload', methods=['POST'])
 def upload_document():
     try:
