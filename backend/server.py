@@ -64,6 +64,7 @@ def home():
 # ==================== AUTENTICAÇÃO ====================
 
 
+@app.route('/auth/register', methods=['POST'])
 @app.route('/api/auth/register', methods=['POST'])
 def register():
     try:
