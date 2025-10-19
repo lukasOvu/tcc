@@ -55,7 +55,9 @@ def allowed_file(filename):
 # ==================== ROUTES ====================
 
 
+@app.route('/', methods=['GET'])
 @app.route('/api/', methods=['GET'])
+@app.route('/api', methods=['GET'])
 def home():
     return jsonify({"message": "TAXXAT API - Sistema de IA para Imposto de Renda", "status": "online"})
 
