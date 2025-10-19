@@ -19,11 +19,10 @@ load_dotenv(ROOT_DIR / '.env')
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY', 'taxxat_secret_key_2025')
 
-# CORS Configuration
+# CORS Configuration - Allow all origins for development
 CORS(app,
      supports_credentials=True,
-     origins=["http://localhost:3000",
-              "https://taxbot.preview.emergentagent.com"],
+     origins="*",
      allow_headers=["Content-Type", "Authorization"],
      methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"])
 
