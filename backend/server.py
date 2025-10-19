@@ -112,6 +112,7 @@ def register():
         return jsonify({"error": "Erro ao realizar cadastro"}), 500
 
 
+@app.route('/auth/login', methods=['POST'])
 @app.route('/api/auth/login', methods=['POST'])
 def login():
     try:
