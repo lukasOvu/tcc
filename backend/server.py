@@ -155,6 +155,7 @@ def logout():
     return jsonify({"message": "Logout realizado com sucesso!"}), 200
 
 
+@app.route('/auth/me', methods=['GET'])
 @app.route('/api/auth/me', methods=['GET'])
 def get_current_user():
     user_id = session.get('user_id')
